@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+@import 'variable';
+@import 'mixin';
+
+* {
+    font-family: 'Oswald', sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    ul {
+        @include flex_d_row();
+        margin: 0;
+        align-items: center;
+        cursor: pointer;
+
+        li {
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-left: 8px;
+            &:hover {
+                background-color: $header_hover_color;
+            }
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+// section_1 
+.navbar {
+    color: #fff;
+    height: max-content;
+    padding: .5rem 0;
+    background-color: $header_color;
+    @include flex_d_row();
+    justify-content: space-around;
+    box-shadow: 0 6px 8px -4px black;
+    position: sticky;
+}
+.logo{
+    padding: 0;
+    margin: 0;
+    color: yellowgreen;
+    &:hover{
+    background-color: $header_color !important;
+    }
+}
+// section_2 
+.learn{
+    @include display_height(#fff);
+    @include flex_d_column;
+    h1{
+        color:#fff;
+        margin-top: 20px;
+    }
+    background-color: $learn_bg;
+    button{
+        background-color: $header_color;
+        border: none;
+        box-shadow: 0px 2px 2px black;
+        color: #fff;
+        border-radius: 18px;
+        padding: 10px;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0px 4px 5px black;
+        }
+    }
+    img{
+        width: 35vw;
+        margin-top: 20px;
+    }
+    
+}
+// section_3
+.course{
+    background-color: $like_gray;
+    @include flex_d_column;
+    h1{
+        margin-top: 30px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    hr{
+        width: 10%;
+        box-sizing: 0px 5px 5px black;
+        border: 1px solid gray;
+    }
+    padding-bottom: 80px;
+}
+.box_section_1{
+    @include flex_d_row;
+    .box_1{
+        @include course_box_style
+    };
+}
+.box_section_2{
+    @include flex_d_row;
+    .box_2{
+        @include course_box_style;
+        margin-top: 20px;
+    }
+}
+// section_4
+.top_courses{
+    width: 100%;
+    padding: 80px 0;
+    .top_top{
+        display: flex;
+        justify-content: space-around;
+    }
+    .pera{
+        width: 60%;
+    }
+    .pera_button{
+        width: 20%;
+        button{
+            border-radius: 20px;
+            padding: 4px 18px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    }
+}
+.container{
+    width: 80%;
+    margin:20px auto;
+};
+.sell_box{
+    width: 100%;
+    height: max-content;
+    flex-wrap: nowrap;
+    @include flex_d_row;
+    
+}
+.inner_sell_box{
+    width: 25%;
+    height: max-content;
+    margin-left: 16px;
+    box-shadow: 0px 2px 2px gray;
+    margin-top: 25px;
+    padding: 16px;
+    border-radius: 5px;
+    &:hover{
+        box-shadow: 1px 4px 4px gray;
+    }
+    img{
+        width: 100%;
+        height: 180px;
+        background: none;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+    p{
+        padding: 0;
+        margin: 0;
+    }
+    h2{
+        padding: 0;
+        margin: 0;
+    }
+    h3{
+        padding: 0;
+        margin: 0; 
+    }
+    svg{
+        color: rgb(212, 212, 5);
+    }
+}
+// section_5
+.discover{
+    background-color: $like_gray;
+    width: 100%;
+    padding: 30px 0;
+    .container{       
+        p{
+            margin: 0;
+        }
+        .text{
+            padding: 25px 0;
+        }
+    }
+}
+.box_3{
+    @include flex_d_row;
+    cursor: pointer;
+    p{
+        color: #fff;
+        width: 22%;
+        margin-left: 20px !important;
+        text-align: center;
+        padding: 16px;
+    }
+    p:nth-child(1){
+        background-color: #ad0634;
+    }
+    p:nth-child(2){
+        background-color: #6915c3;
+    }
+    p:last-child{
+        background-color: #2618c7;
+    }
+}
+// section_6 same as -- section_5
+// best sellers course
+
+// section_7 same as -- section_5
+.achieve{
+    box-shadow: 0px -5px 5px -5px rgb(1 1 1 / 60%);
+    .achieve_text{
+        display: block !important;
+    }
+    h3{
+        padding: 10px 0;
+    }
+    p{
+        padding-bottom: 10px;
+    }
+    .inner_sell_box{
+        text-align: center !important;
+    }
+}
+// part_8 
+.discover{
+    .clients_part{
+        @include flex_d_row;
+        justify-content: space-between !important;
+        box-shadow: 0 0px 1px 0px;
+        padding: 10px;
+    }
+    .clients_left{
+        width: 40%;
+        padding: 16px 16px 10px 5px;
+        border-right: .1px solid gray;
+        p{
+            margin: 3.2rem 0;
+        }
+        .clennts_left_img{
+            @include flex_d_row;
+            justify-content: start !important;
+            img{
+                width: 15%;
+                height: max-content;
+                border-radius: 50%;
+                background-color: red;
+                border: 1px solid black;
+            }
+            p{
+                margin: 5px;
+                b{
+                    font-size: x-large;
+                }
+            }
+        }
+    }
+    .clients_right{
+        width: 40%;
+        iframe{
+            border: 12px solid #EFF3F2;
+            border-radius: 10px;
+        }
+        
+    }
+}
+// section_8 
+.lmsedu{
+    .container{
+        text-align: center;
+        ul li{
+            &:hover{
+                background-color: $like_gray;
+            }
+        }
+        a{
+            color: black;
+        }
+    }
+}
