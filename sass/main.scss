@@ -31,6 +31,12 @@
             }
         }
     }
+    .body{
+        display: block;
+    }
+    #responsive_alert{
+        display: none;
+    }
 }
 // section_1 
 .navbar {
@@ -262,6 +268,9 @@
     }
     .clients_right{
         width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         iframe{
             border: 12px solid #EFF3F2;
             border-radius: 10px;
@@ -270,6 +279,8 @@
     }
 }
 // section_8 
+// clients  same as some section
+// section_9
 .lmsedu{
     .container{
         text-align: center;
@@ -281,5 +292,119 @@
         a{
             color: black;
         }
+    }
+}
+// section_10
+.our_blog{
+    .uk-position-relative{
+        margin-top: 50px;
+    }
+    ul li{
+        display: flex;
+        justify-content: center;
+        &:hover{
+            background-color: $box_color;
+        }
+        .inner_sell_box{
+            color: black;
+            h3{
+                color: black;
+            }
+        }  
+        .date_section{
+            @include flex_d_row ;
+            justify-content: space-between !important;
+            padding: 8px 0;
+        }
+        .read_more_section{
+            .read_more_left{
+                @include flex_d_row ;
+                align-items: center !important;
+                svg{
+                    padding-left: 6px;
+                    color: $header_color;
+                }
+                h3{
+                    color: $header_color;
+                }
+            } 
+        }
+        .read_more_right{
+            @include flex_d_row ;
+                align-items: center !important;
+                svg{
+                    padding: 0 5px;
+                }
+        }
+    }
+}
+// section_11
+.become{
+    margin-top: 40px;
+    min-height: 50vh;
+    background-image: url(../public/box22.jpeg);
+    width: -webkit-fill-available;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // filter: blur(3px);
+    //  -webkit-filter: blur(3px);
+    -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    position: relative;
+    text-align: center;
+    .middle{
+        h1{
+        color: #fff;
+        padding: 2rem 0;
+    }
+    input{
+        padding: 1rem 2.5rem;
+        width: 30vw;
+        border-radius: 100px;
+    }
+    button{
+        padding: 1rem 2.5rem;
+        border-radius: 100px;
+        margin-left: -80px;
+    }
+    }  
+}
+// section_12 
+.button{
+    background-color: $buttom_bg_color;
+    overflow: hidden;
+    .container{
+        .ul_column{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+    }
+    p{
+        color: #fff;
+        float: right;
+        padding-bottom: 50px;
+    }
+}
+// responsive
+@media only screen and (max-width:660px){
+    .body{
+        display: none;
+    }
+    #responsive_alert{
+        columns: red;
+        display: block;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+        background-color: yellowgreen;
     }
 }
